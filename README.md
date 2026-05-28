@@ -20,4 +20,4 @@ Portfólio acadêmico de Jonatha Figueiredo para a disciplina de Fundamentos da 
 
 Repositório público: <https://github.com/odevfigueiredo/jonathafigueiredo>
 
-Site publicado: <https://odevfigueiredo.github.io/odevfigueiredo/>
+Site publicado: <https://odevfigueiredo.github.io/jonathafigueiredo/>
