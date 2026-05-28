@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio acadêmico e profissional de Jonatha Figueiredo, estudante de Análise e Desenvolvimento de Sistemas."
+    />
+    <title>Jonatha Figueiredo | Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <!-- Menu do topo do site -->
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navegação principal">
+        <a class="brand" href="#sobre" aria-label="Ir para o início">
+          <img class="brand-avatar" src="https://avatars.githubusercontent.com/u/222033740?v=4" alt="Foto de perfil de Jonatha Figueiredo" />
+          <span>Jonatha Figueiredo</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-actions" id="menu-principal">
+          <a href="#sobre">Sobre mim</a>
+          <a href="#formacao">Formação</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Início do conteúdo principal -->
+    <main>
+      <!-- Apresentação inicial (Hero) -->
+      <section class="hero section" id="sobre">
+        <div class="hero-content">
+          <p class="eyebrow">Estudante de ADS e eterno aprendiz em tecnologia</p>
+          <h1>Portfólio de Jonatha Figueiredo</h1>
+          <p class="lead">
+            Estudo e pratico o desenvolvimento de aplicações web e mobile de forma dedicada. 
+            Este espaço reúne meus primeiros passos, o que venho aprendendo no dia a dia e meus projetos de estudo.
+          </p>
+
+          <div class="hero-actions" aria-label="Links principais">
+            <a class="button primary" href="#portfolio">Ver projetos</a>
+            <a class="button secondary" href="https://github.com/odevfigueiredo" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <aside class="profile-panel" aria-label="Resumo do perfil">
+          <img
+            class="avatar"
+            src="https://avatars.githubusercontent.com/u/222033740?v=4"
+            alt="Foto de perfil de Jonatha Figueiredo no GitHub"
+          />
+          <div>
+            <strong>Rio de Janeiro - Brasil</strong>
+            <span>Praticando web, mobile e lógica</span>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Seção "Sobre mim" (Meu perfil) -->
+      <section class="section split" aria-labelledby="sobre-titulo">
+        <div>
+          <p class="eyebrow">Sobre mim</p>
+          <h2 id="sobre-titulo">Perfil pessoal</h2>
+        </div>
+        <div class="content-stack">
+          <p>
+            Sou Jonatha Figueiredo, estudante de Análise e Desenvolvimento de
+            Sistemas. Tenho grande interesse por aprender sobre produtos digitais,
+            especialmente nas áreas de finanças, educação, saúde, fitness e desenvolvimento mobile.
+          </p>
+          <p>
+            Nos meus projetos de estudo, gosto de praticar transformando ideias em interfaces
+            funcionais, escrevendo código o mais organizado possível e registrando meu aprendizado com
+            documentações e capturas de tela. Meus hobbies se conectam com
+            tecnologia, jogos e construção de projetos próprios para exercitar o que aprendo.
+          </p>
+        </div>
+      </section>
+
+      <!-- Seção com meus estudos e cursos -->
+      <section class="section education" id="formacao" aria-labelledby="formacao-titulo">
+        <div class="section-heading">
+          <p class="eyebrow">Formação & Aprendizado</p>
+          <h2 id="formacao-titulo">Minha jornada de estudos</h2>
+          <p>
+            Sou um aprendiz entusiasmado por tecnologia. A análise abaixo destaca o que tenho praticado e estudado no momento, sempre buscando aprender coisas novas a cada dia.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article>
+            <span>Ensino Médio Técnico | 2021 - 2023</span>
+            <h3>Ensino Médio Técnico em Eletrotécnica</h3>
+            <p>
+              Concluído na FAETEC. Foi onde tive meus primeiros contatos com circuitos, desenho técnico e lógica para resolver problemas práticos de engenharia.
+            </p>
+          </article>
+          <article>
+            <span>Faculdade | Iniciado em 2025</span>
+            <h3>Análise e Desenvolvimento de Sistemas</h3>
+            <p>
+              Cursando na UNINTER. Focando em aprender lógica de programação, desenvolvimento web, estruturas de dados e engenharia de software de forma bem prática.
+            </p>
+          </article>
+          <article>
+            <span>Idiomas</span>
+            <h3>Português e inglês técnico</h3>
+            <p>
+              Praticando a leitura de documentações oficiais, guias de desenvolvimento e mensagens de erro em inglês para ajudar no dia a dia dos estudos.
+            </p>
+          </article>
+        </div>
+
+        <div class="skills-grid" aria-label="Nível de tecnologias">
+          <article class="skill-card">
+            <div class="skill-top">
+              <h3>HTML, CSS e JavaScript</h3>
+              <span>Iniciante / Praticando</span>
+            </div>
+            <p>
+              A base da minha jornada na web. Praticando responsividade, navegação fluida, validação de formulários e novas interfaces.
+            </p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-top">
+              <h3>React, Next.js e Vite</h3>
+              <span>Aprendiz</span>
+            </div>
+            <p>
+              Dando meus primeiros passos com componentes e interfaces dinâmicas
+              para entender como construir aplicações web modernas.
+            </p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-top">
+              <h3>React Native e Expo</h3>
+              <span>Aprendiz em evolução</span>
+            </div>
+            <p>
+              Praticando a criação de telas mobile simples e explorando recursos
+              básicos de navegação em projetos experimentais.
+            </p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-top">
+              <h3>Node.js, Express e APIs</h3>
+              <span>Iniciante</span>
+            </div>
+            <p>
+              Estudando o back-end, aprendendo a criar rotas simples, entender
+              requisições HTTP e estruturar integrações básicas.
+            </p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-top">
+              <h3>Prisma, MySQL e SQLite</h3>
+              <span>Iniciante em Bancos</span>
+            </div>
+            <p>
+              Aprendendo a modelar dados, compreender relacionamentos básicos,
+              persistir informações e interagir com bancos de dados.
+            </p>
+          </article>
+          <article class="skill-card">
+            <div class="skill-top">
+              <h3>Python, Java e automação</h3>
+              <span>Noções Básicas</span>
+            </div>
+            <p>
+              Praticando conceitos iniciais de lógica orientada a objetos com
+              Java e scripts de terminal bem simples em Python.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Seção com meus projetos do GitHub -->
+      <section class="section portfolio" id="portfolio" aria-labelledby="portfolio-titulo">
+        <div class="section-heading">
+          <p class="eyebrow">Portfólio</p>
+          <h2 id="portfolio-titulo">Projetos selecionados</h2>
+          <p>
+            Seleção de trabalhos que mostram evolução prática em front-end,
+            mobile, back-end, banco de dados, testes e documentação.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <span class="project-type">FinTech</span>
+            <h3>FinTrack</h3>
+            <p>
+              Plataforma de finanças pessoais com dashboard web, app mobile, API
+              REST, autenticação, metas, categorias e relatórios.
+            </p>
+            <div class="tags">
+              <span>TypeScript</span>
+              <span>React Native</span>
+              <span>Node.js</span>
+              <span>Prisma</span>
+            </div>
+            <a href="https://github.com/odevfigueiredo/fintrack" target="_blank" rel="noreferrer">
+              Abrir repositório
+            </a>
+          </article>
+
+          <article class="project-card">
+            <span class="project-type">Educação financeira</span>
+            <h3>Finance Quest</h3>
+            <p>
+              App gamificado para registrar aportes, aprender sobre classes de
+              investimento, ganhar XP e acompanhar evolução financeira.
+            </p>
+            <div class="tags">
+              <span>JavaScript</span>
+              <span>Expo</span>
+              <span>LocalStorage</span>
+              <span>Playwright</span>
+            </div>
+            <a href="https://github.com/odevfigueiredo/financequest" target="_blank" rel="noreferrer">
+              Abrir repositório
+            </a>
+          </article>
+
+          <article class="project-card">
+            <span class="project-type">Fitness tech</span>
+            <h3>FitPlanner</h3>
+            <p>
+              Monorepo com app mobile, dashboard web e API para planejamento de
+              treinos, evolução corporal, histórico e métricas.
+            </p>
+            <div class="tags">
+              <span>Expo</span>
+              <span>Next.js</span>
+              <span>Express</span>
+              <span>MySQL</span>
+            </div>
+            <a href="https://github.com/odevfigueiredo/fitplanner" target="_blank" rel="noreferrer">
+              Abrir repositório
+            </a>
+          </article>
+
+          <article class="project-card">
+            <span class="project-type">Dados e lógica</span>
+            <h3>Python, Java e AWS</h3>
+            <p>
+              Repositórios com ETL em Python, sistemas de terminal, aplicação
+              Java orientada a objetos e arquitetura de plataforma em nuvem AWS.
+            </p>
+            <div class="tags">
+              <span>Python</span>
+              <span>Java</span>
+              <span>AWS</span>
+              <span>GitHub Actions</span>
+            </div>
+            <a href="https://github.com/odevfigueiredo?tab=repositories" target="_blank" rel="noreferrer">
+              Ver todos os projetos
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Meus contatos e redes sociais -->
+      <section class="section contact" id="contato" aria-labelledby="contato-titulo">
+        <div class="contact-copy">
+          <p class="eyebrow">Contato</p>
+          <h2 id="contato-titulo">Vamos conversar?</h2>
+          <p>
+            Fique à vontade para mandar uma mensagem pelo formulário ou entrar em contato direto pelas minhas redes sociais!
+          </p>
+
+          <div class="contact-buttons-container">
+            <a href="mailto:jon.setup.comercial@gmail.com" class="contact-card">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div class="contact-details">
+                <h3>E-mail</h3>
+                <p>jon.setup.comercial@gmail.com</p>
+                <span class="contact-action">Enviar e-mail &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/odevfigueiredo" target="_blank" rel="noreferrer" class="contact-card">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              </div>
+              <div class="contact-details">
+                <h3>GitHub</h3>
+                <p>github.com/odevfigueiredo</p>
+                <span class="contact-action">Ver perfil &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://linkedin.com/in/jonathafigueiredo" target="_blank" rel="noreferrer" class="contact-card">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div class="contact-details">
+                <h3>LinkedIn</h3>
+                <p>linkedin.com/in/jonathafigueiredo</p>
+                <span class="contact-action">Conectar &rarr;</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="form-contato" novalidate>
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" placeholder="Seu nome completo" />
+            <small class="error-message" id="erro-nome"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="seuemail@dominio.com" />
+            <small class="error-message" id="erro-email"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
+            <small class="error-message" id="erro-mensagem"></small>
+          </div>
+
+          <button class="button primary" type="submit">Enviar mensagem</button>
+          <p class="form-feedback" id="feedback-form" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <!-- Rodapé do site -->
+    <footer class="site-footer">
+      <p>Portfólio acadêmico desenvolvido com HTML, CSS e JavaScript puro.</p>
+      <a href="#sobre">Voltar ao topo</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

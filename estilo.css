@@ -1,0 +1,667 @@
+/* Fonte do Google que achei bonita para usar no portfólio */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* Minhas variáveis de cor (mudei para o tema escuro com vermelho!) */
+:root {
+  --bg: #09090b;               /* Fundo bem escuro */
+  --surface: #121216;          /* Cor dos cards */
+  --surface-strong: #1a1a24;   /* Cor do card quando passa o mouse */
+  --text: #f4f4f7;             /* Cor das letras */
+  --muted: #9ca3af;            /* Cor dos textos secundários */
+  --primary: #e50914;          /* Vermelho principal */
+  --primary-dark: #b91c1c;     /* Vermelho mais escuro para o hover */
+  --accent: #f87171;           /* Vermelho clarinho */
+  --gold: #f59e0b;             /* Amarelo para os destaques */
+  --line: #22222e;             /* Cor das bordas */
+  --shadow: 0 20px 45px rgba(0, 0, 0, 0.65); /* Sombra dos cards */
+  --radius: 12px;              /* Bordas arredondadas */
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
+/* Rolar a tela de forma suave */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+/* Barra do topo (navbar) */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(9, 9, 11, 0.85); /* Fundo com transparência sutil */
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(16px);
+}
+
+.navbar {
+  width: min(1120px, calc(100% - 32px));
+  min-height: 72px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand,
+.nav-actions,
+.hero-actions,
+.tags {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  gap: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--text);
+}
+
+/* Minha foto de perfil redonda na barra do topo */
+.brand-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.brand:hover .brand-avatar {
+  transform: scale(1.1);
+}
+
+.nav-actions {
+  gap: 8px;
+}
+
+.nav-actions a {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.nav-actions a:hover,
+.nav-actions a.active {
+  border-color: var(--line);
+  background: var(--surface);
+  color: var(--primary);
+}
+
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 4px auto;
+  background: var(--text);
+}
+
+/* Estilo geral das seções */
+.section {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 88px 0;
+  scroll-margin-top: 90px;
+}
+
+/* Seção de apresentação (Hero) */
+.hero {
+  min-height: calc(100vh - 72px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  align-items: center;
+  gap: 36px;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 760px;
+  margin-bottom: 20px;
+  font-size: clamp(2.6rem, 7vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  font-weight: 800;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.lead {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 1.14rem;
+}
+
+.hero-actions {
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+/* Estilo dos meus botões */
+.button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button.primary {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+}
+
+.button.primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4);
+}
+
+.button.secondary {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.button.secondary:hover {
+  background: var(--surface-strong);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Painel da direita no Hero com minha foto */
+.profile-panel {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.profile-panel:hover {
+  border-color: rgba(229, 9, 20, 0.3);
+}
+
+.profile-panel div {
+  display: grid;
+  gap: 4px;
+}
+
+.profile-panel span,
+.content-stack,
+.section-heading p,
+.timeline p,
+.skill-card p,
+.project-card p,
+.contact-copy p {
+  color: var(--muted);
+}
+
+.avatar {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 2px solid var(--line);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-panel:hover .avatar {
+  border-color: var(--primary);
+  transform: scale(1.02);
+}
+
+/* Seção de Perfil/Sobre mim */
+.split {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+  gap: 48px;
+  border-top: 1px solid var(--line);
+}
+
+.content-stack {
+  display: grid;
+  gap: 18px;
+  font-size: 1.04rem;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 34px;
+}
+
+/* Minha linha do tempo de estudos */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+/* Cards gerais com efeitos de passar o mouse */
+.timeline article,
+.skill-card,
+.project-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  padding: 22px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline article:hover,
+.skill-card:hover,
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: 0 12px 30px rgba(229, 9, 20, 0.12);
+}
+
+.timeline span,
+.project-type {
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Grades para habilidades e projetos */
+.skills-grid,
+.project-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.skills-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.skill-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.skill-top span {
+  flex: 0 0 auto;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--surface-strong);
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.project-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.project-card {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card p {
+  flex: 1;
+}
+
+.project-card a {
+  margin-top: 16px;
+  color: var(--primary);
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.project-card a:hover {
+  color: var(--accent);
+  text-decoration: none;
+  gap: 8px;
+}
+
+.tags {
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.tags span {
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Meus cartões de contato novos */
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 1.15fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.contact-buttons-container {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  text-decoration: none !important;
+  color: var(--text) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.contact-card:hover {
+  border-color: var(--primary);
+  background: var(--surface-strong);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(229, 9, 20, 0.18);
+}
+
+.contact-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(229, 9, 20, 0.08);
+  color: var(--primary);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+.contact-details {
+  display: grid;
+  gap: 4px;
+}
+
+.contact-details h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.contact-details p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.contact-action {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 4px;
+  transition: color 0.3s ease;
+}
+
+.contact-card:hover .contact-action {
+  color: var(--accent);
+}
+
+/* Estilo do meu formulário de contato */
+.contact-form {
+  display: grid;
+  gap: 16px;
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.form-group {
+  display: grid;
+  gap: 8px;
+}
+
+.contact-form label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  padding: 12px 16px;
+  transition: all 0.2s ease;
+}
+
+/* Borda vermelha com brilho quando clica para digitar */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.15);
+}
+
+/* Mensagens de erro quando falta preencher algo */
+.error-message {
+  min-height: 18px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* Mensagem de sucesso quando envia */
+.form-feedback {
+  min-height: 20px;
+  margin: 4px 0 0;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Rodapé */
+.site-footer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 28px 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: var(--primary);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Deixando tudo responsivo para celular */
+@media (max-width: 980px) {
+  .hero,
+  .split,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 72px;
+  }
+
+  .profile-panel {
+    max-width: 100%;
+  }
+
+  .timeline,
+  .skills-grid,
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .navbar {
+    min-height: 66px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-actions {
+    position: absolute;
+    top: 66px;
+    left: 16px;
+    right: 16px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+
+  .nav-actions.open {
+    display: flex;
+  }
+
+  .nav-actions a {
+    width: 100%;
+    text-align: left;
+  }
+
+  .section {
+    padding: 64px 0;
+    scroll-margin-top: 78px;
+  }
+
+  .timeline,
+  .skills-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
